@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C636367E-F783-4D2C-8BC7-75AEFAC215D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PinBot</RootNamespace>
+    <AssemblyName>PinBot</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Brainleaf-Round-Social-Pinterest.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PinBot.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.92.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="account.cs" />
+    <Compile Include="archive.cs" />
+    <Compile Include="BoardMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardMapping.Designer.cs">
+      <DependentUpon>BoardMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrightnessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrightnessForm.designer.cs">
+      <DependentUpon>BrightnessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContrastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContrastForm.designer.cs">
+      <DependentUpon>ContrastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Follow_settings.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="imgfave.cs" />
+    <Compile Include="ManageCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCategories.Designer.cs">
+      <DependentUpon>ManageCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RePin_Pin.cs" />
+    <Compile Include="ContinuousSettings.cs" />
+    <Compile Include="scrape.cs" />
+    <Compile Include="Stats.cs" />
+    <Compile Include="UsersMappingSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersMappingSimple.Designer.cs">
+      <DependentUpon>UsersMappingSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersMapping.Designer.cs">
+      <DependentUpon>UsersMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImgImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgImport.Designer.cs">
+      <DependentUpon>ImgImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="promo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="promo2.Designer.cs">
+      <DependentUpon>promo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CropForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CropForm.designer.cs">
+      <DependentUpon>CropForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="follow.cs" />
+    <Compile Include="followers.cs" />
+    <Compile Include="GammaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GammaForm.designer.cs">
+      <DependentUpon>GammaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageHandler.cs" />
+    <Compile Include="ImageProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageProcessing.Designer.cs">
+      <DependentUpon>ImageProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="invites.cs" />
+    <Compile Include="like.cs" />
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="http.cs" />
+    <Compile Include="ManageQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageQueue.Designer.cs">
+      <DependentUpon>ManageQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="promo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="promo.Designer.cs">
+      <DependentUpon>promo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="repin.cs" />
+    <Compile Include="serializer.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucManage.Designer.cs">
+      <DependentUpon>ucManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="unfollow.cs" />
+    <Compile Include="upload.cs" />
+    <Compile Include="user.cs" />
+    <Compile Include="Watermark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Watermark.Designer.cs">
+      <DependentUpon>Watermark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="weheartit.cs" />
+    <EmbeddedResource Include="BoardMapping.resx">
+      <DependentUpon>BoardMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrightnessForm.resx">
+      <DependentUpon>BrightnessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContrastForm.resx">
+      <DependentUpon>ContrastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCategories.resx">
+      <DependentUpon>ManageCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersMappingSimple.resx">
+      <DependentUpon>UsersMappingSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersMapping.resx">
+      <DependentUpon>UsersMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgImport.resx">
+      <DependentUpon>ImgImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="promo2.resx">
+      <DependentUpon>promo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CropForm.resx">
+      <DependentUpon>CropForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GammaForm.resx">
+      <DependentUpon>GammaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageProcessing.resx">
+      <DependentUpon>ImageProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageQueue.resx">
+      <DependentUpon>ManageQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="promo.resx">
+      <DependentUpon>promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucManage.resx">
+      <DependentUpon>ucManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Watermark.resx">
+      <DependentUpon>Watermark.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SQLite.Interop.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\System.Data.SQLite.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pinterest-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Brainleaf-Round-Social-Pinterest.ico" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\imp.png" />
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\nok.png" />
+    <None Include="Resources\Save-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
